@@ -3,10 +3,10 @@ import { MapContainer, Marker, Popup, TileLayer, Tooltip } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
 import "leaflet-defaulticon-compatibility"
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css"
-import style from '../styles/map.module.scss'
+import style from '../../style/map.module.scss'
 
-export default function TheMap(props: any) {
-  const { position, zoom } = props
+function Map(props: any) {
+  // const { position, zoom } = props
 
 return (
 
@@ -23,3 +23,5 @@ return (
   </MapContainer>
   )
 }
+
+export default Map;

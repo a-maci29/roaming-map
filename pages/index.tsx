@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import clientPromise from '../lib/mongodb'
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
-import TheMap from '../components/TheMap'
+import Map from '../components/Map'
+import style from '../style/map.module.scss';
 
 type ConnectionStatus = {
   isConnected: boolean
@@ -46,7 +47,7 @@ export default function Home({
           </h2>
         )}
 
-        <TheMap />
+        <Map />
       </main>
 
       <footer>
