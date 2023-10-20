@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import clientPromise from '../lib/mongodb'
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
+import Link from 'next/link'
 import Map from '../components/Map'
-import style from '../style/map.module.scss';
+import Header from '../components/site/Navigation'
+import 'bootstrap/dist/css/bootstrap.css'
+import Navigation from '../components/site/Navigation'
 
 type ConnectionStatus = {
   isConnected: boolean
@@ -32,11 +35,12 @@ export default function Home({
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Roaming</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
+        <Navigation/>
 
         {isConnected ? (
           <h2 className="subtitle">Connected to Mongo</h2>
@@ -47,9 +51,9 @@ export default function Home({
           </h2>
         )}
 
-        <Map />
-      </main>
 
+      </main>
+      <Map />
       <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -64,6 +68,8 @@ export default function Home({
       <style jsx>{`
         .container {
           min-height: 100vh;
+          min-width: 100vh;
+
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
@@ -72,7 +78,6 @@ export default function Home({
         }
 
         main {
-          padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;

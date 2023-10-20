@@ -6,6 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "bootstrap": "^5.3.2",
+    "bootstrap-next": "^1.0.5",
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "mongodb": "^4.17.1",
     "next": "^13.5.4",
