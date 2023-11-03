@@ -6,6 +6,8 @@ export default function Navigation(){
     <li><Link href="/geospatial">Home</Link></li>
     <li>About</li>
     <li>Contact</li>
+    <li>Log In/ Sign Up</li>
+
   </nav>
   )
 }
